@@ -3,7 +3,7 @@ import React, { useState } from "react"
 //import axios from "axios"
 import {useNavigate, Link } from "react-router-dom"
 import './login.css'
-const apiUrl=process.env.REACT_APP_API_URLS||'http://localhost:5000'
+const apiUrl="https://imdb-movie-recommendation-backend.onrender.com"
 function Signup() {
 
     const history=useNavigate();
