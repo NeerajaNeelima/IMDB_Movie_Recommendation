@@ -3,6 +3,7 @@ import React, { useState } from "react"
 //import axios from "axios"
 import {useNavigate, Link } from "react-router-dom"
 import './login.css'
+const apiUrl=process.env.REACT_APP_API_URLS||'http://localhost:5000'
 function Signup() {
 
     const history=useNavigate();
@@ -14,7 +15,7 @@ function Signup() {
         //alert("Hello");
         //console.log("Submit button clicked");
         try{
-            const response = await fetch("http://localhost:5000/api/signup", {
+            const response = await fetch(`${apiUrl}/api/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -4,16 +4,20 @@ const cors=require("cors")
 const app=express()
 const company=require("./Routers/router")
 require('dotenv').config()
-const port =process.env.PORT
+const port =process.env.PORT||5000
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
-
+//const path=require('path');
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to ecommerce app</h1>");
+  
 });
-app.use("/api", company)
+//app.use(express.static(path.join(__dirname,'../Frontend/build')))
 
+app.use("/api", company)
+/*app.get('*',function(res,req){
+    res.sendFile(path.join(__dirname,'../Frontend/build/index.html'))
+})*/
 app.listen(port,() => {
     console.log(`Port connected ${port}`);
   })
