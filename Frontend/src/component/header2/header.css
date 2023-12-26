@@ -1,0 +1,29 @@
+.header {
+    margin: 0 2.5rem;
+    padding: .5rem 0;
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+}
+img{
+    height:45px;
+    width: 80px;
+}
+.headerLeft{
+    display: flex;
+    align-items: center;
+}
+a > span{
+    margin: 0 30px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+ 
+a > span:hover{
+    color:red;
+}
+.headerRight{
+    float:right;
+}
