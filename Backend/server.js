@@ -18,7 +18,7 @@ app.use("/api", company)
 /*app.get('*',function(res,req){
     res.sendFile(path.join(__dirname,'../Frontend/build/index.html'))
 })*/
-app.listen(port,() => {
-    console.log(`Port connected ${port}`);
-  })
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${port}`);
+});
   
